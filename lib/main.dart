@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:integranic_movil_cliente/galeria/galeria_widgets.dart';
 import 'package:integranic_movil_cliente/widgets/app_button.dart';
 import 'package:integranic_movil_cliente/widgets/app_check_box.dart';
+import 'package:integranic_movil_cliente/widgets/app_menu_button.dart';
 import 'package:integranic_movil_cliente/widgets/app_text_field.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -36,6 +37,22 @@ class MyApp extends StatelessWidget {
           ),
           "CheckBox": AppCheckBox(
             onPress: (bool) {},
+          ),
+          "Menu Button": Column(
+            children: [
+              AppMenuButton(
+                appMenuButtonStyle: AppMenuButtonStyle.perfil(),
+              ),
+              AppMenuButton(
+                appMenuButtonStyle: AppMenuButtonStyle.plan(),
+              ),
+              AppMenuButton(
+                appMenuButtonStyle: AppMenuButtonStyle.citas(),
+              ),
+              AppMenuButton(
+                appMenuButtonStyle: AppMenuButtonStyle.chat(),
+              )
+            ],
           )
         },
       ),

@@ -6,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 const kBlackApp = Color(0xff081528);
 const kGray = Color(0xff707070);
 const kWhite = Color(0xffFFFFFF);
+const kBlueText = Color(0xff002DA0);
 const kDarkBlue = Color(0xff0635AD);
 const kDarkBlue2 = Color(0xff467AFF);
 const kBlue4shadow = Color(0xff0047fe);
@@ -18,6 +19,18 @@ const kBlue2 = Color(0xff59C4FF);
 
 const kRojo = Color(0xffEC4646);
 
+///colores de menú
+const kAnaranjado = Color(0xffFF984D);
+const kAnaranjado2 = Color(0xffFED643);
+
+const kRosa = Color(0xffE53683);
+const kRosa2 = Color(0xffFF52DE);
+
+const kAzul = Color(0xff5866FD);
+const kAzul2 = Color(0xff589EFE);
+
+const kVerde = Color(0xff339892);
+const kVerde2 = Color(0xff2EE2BD);
 PMaterialColor(Color color) {
   return MaterialColor(2, {
     50: color.withOpacity(.1),
@@ -64,8 +77,8 @@ Gradient greenGradient({isUpDown = true}) {
 
 Gradient whiteGradient({isUpDown = true}) {
   return RadialGradient(center: Alignment.bottomRight, radius: 5, stops: [
-    .07,
-    .5
+    .15,
+    .65
   ], colors: [
     kWhite,
     kBlackApp,

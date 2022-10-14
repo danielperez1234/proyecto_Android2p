@@ -16,7 +16,7 @@ class _AppCheckBoxState extends State<AppCheckBox>
   late AnimationController ctrl;
   void animate() async {
     ctrl.forward();
-    await Future.delayed(Duration(milliseconds: 300));
+    await Future.delayed(Duration(milliseconds: 100));
     ctrl.animateBack(0);
   }
 
@@ -25,7 +25,7 @@ class _AppCheckBoxState extends State<AppCheckBox>
     // TODO: implement initState
     super.initState();
     ctrl =
-        AnimationController(duration: Duration(milliseconds: 300), vsync: this);
+        AnimationController(duration: Duration(milliseconds: 100), vsync: this);
     animation = ColorTween(begin: kWhite, end: kGreen2).animate(ctrl)
       ..addListener(() {
         setState(() {});
@@ -45,7 +45,7 @@ class _AppCheckBoxState extends State<AppCheckBox>
         width: 35,
         decoration: BoxDecoration(
             color: animation.value == kWhite ? null : animation.value,
-            gradient: animation.value == null
+            gradient: animation.value == kWhite
                 ? widget.isCheck
                     ? greenGradient()
                     : whiteGradient()
