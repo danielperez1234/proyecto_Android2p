@@ -13,11 +13,17 @@ class AppCheckBox extends StatefulWidget {
 class _AppCheckBoxState extends State<AppCheckBox>
     with SingleTickerProviderStateMixin {
   late Animation<Color?> animation;
+  late Animation<Color?> animation2;
+  late Animation<double?> animationNum;
+  late Animation<double?> animationNum2;
   late AnimationController ctrl;
+
   void animate() async {
-    ctrl.forward();
-    await Future.delayed(Duration(milliseconds: 100));
-    ctrl.animateBack(0);
+    if (widget.isCheck) {
+      ctrl.reverse();
+    } else {
+      ctrl.forward();
+    }
   }
 
   @override
@@ -25,8 +31,22 @@ class _AppCheckBoxState extends State<AppCheckBox>
     // TODO: implement initState
     super.initState();
     ctrl =
-        AnimationController(duration: Duration(milliseconds: 100), vsync: this);
-    animation = ColorTween(begin: kWhite, end: kGreen2).animate(ctrl)
+        AnimationController(duration: Duration(milliseconds: 400), vsync: this);
+
+    animation = ColorTween(begin: kWhite, end: kGreen).animate(ctrl)
+      ..addListener(() {
+        setState(() {});
+      });
+    animationNum = Tween(begin: .15, end: .05).animate(ctrl)
+      ..addListener(() {
+        setState(() {});
+      });
+    animationNum2 = Tween(begin: .65, end: .3).animate(ctrl)
+      ..addListener(() {
+        setState(() {});
+      });
+
+    animation2 = ColorTween(begin: kBlackApp, end: kGreen2).animate(ctrl)
       ..addListener(() {
         setState(() {});
       });
@@ -44,12 +64,17 @@ class _AppCheckBoxState extends State<AppCheckBox>
         height: 35,
         width: 35,
         decoration: BoxDecoration(
-            color: animation.value == kWhite ? null : animation.value,
-            gradient: animation.value == kWhite
-                ? widget.isCheck
-                    ? greenGradient()
-                    : whiteGradient()
-                : null,
+            gradient: RadialGradient(
+                center: Alignment.bottomRight,
+                radius: 5,
+                stops: [
+                  animationNum.value!,
+                  animationNum2.value!,
+                ],
+                colors: [
+                  animation.value!,
+                  animation2.value!,
+                ]),
             borderRadius: BorderRadius.circular(11),
             boxShadow: [
               BoxShadow(

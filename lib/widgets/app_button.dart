@@ -18,10 +18,10 @@ class AppButton extends StatelessWidget {
       decoration:
           BoxDecoration(borderRadius: BorderRadius.circular(27), boxShadow: [
         BoxShadow(
-          color: kBlue4shadow.withOpacity(.25),
-          offset: Offset(0, 8),
-          spreadRadius: 2,
-          blurRadius: 15,
+          color: kBlue4shadow.withOpacity(.2),
+          offset: Offset(0, 6),
+          spreadRadius: 1,
+          blurRadius: 6,
         )
       ]),
       child: RawMaterialButton(
@@ -65,7 +65,7 @@ class AppButtonStyle {
     return AppButtonStyle(darkBlueGradient(), kWhite, kDarkBlue, kDarkBlue2);
   }
   factory AppButtonStyle.blue() {
-    return AppButtonStyle(blueGradient(), kWhite, kBlue, kBlue2);
+    return AppButtonStyle(blueGradient(), kWhite, kBlue, kBlue3);
   }
   factory AppButtonStyle.rojo() {
     return AppButtonStyle(

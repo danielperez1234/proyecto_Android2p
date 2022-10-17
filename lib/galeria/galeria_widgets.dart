@@ -25,9 +25,14 @@ class _GaleriaWidgetsState extends State<GaleriaWidgets> {
                     return MapEntry(
                         key,
                         Column(children: [
-                          Text(
-                            key,
-                            style: TextStyle(fontSize: 20),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Text(
+                                key,
+                                style: TextStyle(fontSize: 20),
+                              ),
+                            ],
                           ),
                           value
                         ]));

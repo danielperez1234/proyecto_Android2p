@@ -19,13 +19,20 @@ class _AppMenuButtonState extends State<AppMenuButton> {
       focusElevation: 0,
       hoverColor: widget.appMenuButtonStyle.color1,
       splashColor: widget.appMenuButtonStyle.color2,
+      highlightColor:widget.appMenuButtonStyle.color2.withOpacity(.1),
       focusColor: widget.appMenuButtonStyle.color1,
       fillColor: kWhite,
-      elevation: 1,
+      elevation: 8,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
       child: Container(
         width: 167,
         height: 85,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25),
+            gradient: LinearGradient(
+                colors: [Colors.transparent, kBlackApp.withOpacity(.08)],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter)),
         child: Padding(
           padding: EdgeInsets.all(12),
           child: Row(

@@ -15,7 +15,8 @@ const kGreen2 = Color(0xff9ED64E);
 //
 
 const kBlue = Color(0xff1B97DC);
-const kBlue2 = Color(0xff59C4FF);
+const kBlue2 = Color(0xff31B0F7);
+const kBlue3 = Color(0xff59C4FF);
 
 const kRojo = Color(0xffEC4646);
 
@@ -31,6 +32,37 @@ const kAzul2 = Color(0xff589EFE);
 
 const kVerde = Color(0xff339892);
 const kVerde2 = Color(0xff2EE2BD);
+
+///colores tajetas actividad
+const kAzulFActividad = Color(0xff0635AD);
+const kAzulFActividad2 = Color(0xff467AFF);
+
+const kAzulActividad = Color(0xff5866FD);
+const kAzulActividad2 = Color(0xff589EFE);
+
+const kMoradoActividad = Color(0xff5050C9);
+const kMoradoActividad2 = Color(0xffB069F4);
+
+const kNaranjaActividad = Color(0xffF76E11);
+const kNaranjaActividad2 = Color(0xffFF9F45);
+
+const kVerdeActividad = Color(0xff4E9F3D);
+const kVerdeActividad2 = Color(0xffB5D53A);
+
+const kAmarilloActividad = Color(0xffFFAC06);
+const kAmarilloActividad2 = Color(0xffFFC550);
+
+const kAzulClActividad = Color(0xff4B7BE5);
+const kAzulCLActividad2 = Color(0xff5CC5FF);
+
+const kCelesteActividad = Color(0xff00B2A9);
+const kCelesteActividad2 = Color(0xff2EE2BD);
+
+const kAnaranjadoActividad = Color(0xffFF9A55);
+const kAnaranjadoActividad2 = Color(0xffFCBA44);
+
+const kRosaActividad = Color(0xffED667D);
+const kRosaActividad2 = Color(0xffF39AC6);
 PMaterialColor(Color color) {
   return MaterialColor(2, {
     50: color.withOpacity(.1),
@@ -51,7 +83,7 @@ Gradient blueGradient({isUpDown = true}) {
   return LinearGradient(
       begin: isUpDown ? Alignment.topCenter : Alignment.bottomCenter,
       end: !isUpDown ? Alignment.topCenter : Alignment.bottomCenter,
-      colors: [kBlue2, kBlue]);
+      colors: [kBlue3, kBlue]);
 }
 
 Gradient darkBlueGradient() {
