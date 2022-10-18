@@ -49,17 +49,23 @@ class AppActivityCard extends StatelessWidget {
                   children: [
                     Text(
                       appActivityCardStyle.text,
-                      style: textstyleregular(color: kBlueText, size: 17),
+                      style: textstyleregularViga(color: kBlueText, size: 17),
                     ),
                     SizedBox(
                       height: 4,
                     ),
-                    Text(appActivityCardStyle.mssg),
+                    Text(
+                      appActivityCardStyle.mssg,
+                      style: textstyleregular(size: 13),
+                    ),
                     SizedBox(
                       height: 8,
                     ),
                     if (appActivityCardStyle.appProgressBar != null)
-                      Text("Tu progreso"),
+                      Text(
+                        "Tu progreso",
+                        style: textstyleregular(size: 13, color: kGray),
+                      ),
                     if (appActivityCardStyle.appProgressBar != null)
                       appActivityCardStyle.appProgressBar!
                   ],

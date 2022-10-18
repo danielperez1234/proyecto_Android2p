@@ -36,9 +36,12 @@ class AppUserImage extends StatelessWidget {
         ),
         Text(
           "${porcentaje.toStringAsFixed(0)}%",
-          style: textstyleregular(size: 25),
+          style: textstyleregularViga(size: 25),
         ),
-        Text("Tu progreso total")
+        Text(
+          "Tu progreso total",
+          style: textstyleregular(size: 13),
+        )
       ],
     );
   }

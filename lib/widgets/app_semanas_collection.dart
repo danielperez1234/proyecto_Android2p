@@ -41,7 +41,10 @@ class _AppSemanasCollectionState extends State<AppSemanasCollection> {
               SizedBox(
                 width: 25,
               ),
-              Text("Semana $actualIndex"),
+              Text(
+                "Semana $actualIndex",
+                style: textstyleregular(size: 13),
+              ),
               SizedBox(
                 width: 25,
               ),

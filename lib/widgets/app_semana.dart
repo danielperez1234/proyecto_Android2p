@@ -20,7 +20,10 @@ class AppSemana extends StatelessWidget {
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Text("Semana $semanaIndex | Progreso general"),
+                Text(
+                  "Semana $semanaIndex | Progreso general",
+                  style: textstyleregular(size: 13),
+                ),
               ],
             ),
           ),

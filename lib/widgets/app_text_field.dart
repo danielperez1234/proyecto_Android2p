@@ -34,7 +34,7 @@ class _AppTextFieldState extends State<AppTextField> {
                   margin: EdgeInsets.symmetric(horizontal: 20),
                   child: Text(
                     widget.hint,
-                    style: textstylemedium(color: kBlackApp.withOpacity(.25)),
+                    style: textstyleregular(color: kBlackApp.withOpacity(.25)),
                   ),
                 )
               : const SizedBox(),
@@ -58,7 +58,7 @@ class _AppTextFieldState extends State<AppTextField> {
                         ? TextInputType.text
                         : TextInputType.emailAddress,
                     textAlignVertical: TextAlignVertical.center,
-                    style: textstylemedium(color: kBlackApp, size: 19),
+                    style: textstyleregular(color: kBlackApp, size: 19),
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(bottom: 17),
                       border: InputBorder.none,

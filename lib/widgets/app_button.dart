@@ -43,7 +43,7 @@ class AppButton extends StatelessWidget {
           child: Center(
             child: Text(
               text.toUpperCase(),
-              style: textstyleregular(
+              style: textstyleregularViga(
                   color: appButtonStyle.textColor, size: 17, letterSpacing: 2),
             ),
           ),

@@ -19,7 +19,7 @@ class _AppMenuButtonState extends State<AppMenuButton> {
       focusElevation: 0,
       hoverColor: widget.appMenuButtonStyle.color1,
       splashColor: widget.appMenuButtonStyle.color2,
-      highlightColor:widget.appMenuButtonStyle.color2.withOpacity(.1),
+      highlightColor: widget.appMenuButtonStyle.color2.withOpacity(.1),
       focusColor: widget.appMenuButtonStyle.color1,
       fillColor: kWhite,
       elevation: 8,
@@ -85,7 +85,7 @@ class _AppMenuButtonState extends State<AppMenuButton> {
               ),
               Text(
                 widget.appMenuButtonStyle.text,
-                style: textstyleregular(color: kBlueText, size: 17),
+                style: textstyleregularViga(color: kBlueText, size: 17),
               )
             ],
           ),

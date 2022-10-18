@@ -134,7 +134,7 @@ class _AppProgressBarState extends State<AppProgressBar>
   void animate() async {
     ctrl.forward();
     await Future.delayed(ctrl.duration!);
-    ctrl.reverse();
+    if (mounted) ctrl.reverse();
     await Future.delayed(ctrl.duration!);
     if (mounted) animate();
   }
@@ -176,8 +176,7 @@ class _AppProgressBarState extends State<AppProgressBar>
                     child: Center(
                   child: Text(
                     "${widget.porcentaje.toInt()}%",
-                    style:
-                        textstyleregular(color: kWhite, size: widget.textSize),
+                    style: textstyleBlack(color: kWhite, size: widget.textSize),
                   ),
                 )),
                 Container(

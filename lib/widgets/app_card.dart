@@ -46,20 +46,22 @@ class AppCard extends StatelessWidget {
                       children: [
                         Text(
                           textHead,
-                          style: textstyleregular(color: kBlueText, size: 17),
+                          style:
+                              textstyleregularViga(color: kBlueText, size: 17),
                         ),
                         SizedBox(
                           height: 4,
                         ),
                         Text(
                           textMid,
+                          style: textstyleregular(size: 13),
                         ),
                         SizedBox(
                           height: 8,
                         ),
                         Text(
                           textPie,
-                          style: textstyleregular(color: kDarkBlue2, size: 13),
+                          style: textstyleBold(color: kDarkBlue2, size: 13),
                         )
                       ],
                     ),

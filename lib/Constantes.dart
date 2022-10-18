@@ -118,16 +118,16 @@ Gradient whiteGradient({isUpDown = true}) {
 }
 
 //text Styles
-/// Weight 600
-TextStyle textstyleButton({double size = 16, Color color = kBlackApp}) =>
+/// Weight 300
+TextStyle textstyleLight({double size = 16, Color color = kBlackApp}) =>
     TextStyle(
-        fontFamily: 'Viga',
+        fontFamily: 'Lato',
         color: color,
         fontSize: size,
-        fontWeight: FontWeight.w600);
+        fontWeight: FontWeight.w300);
 
 /// Weight 400
-TextStyle textstyleregular({
+TextStyle textstyleregularViga({
   double size = 16,
   Color color = kBlackApp,
   double? letterSpacing,
@@ -140,11 +140,24 @@ TextStyle textstyleregular({
       fontWeight: FontWeight.w400,
     );
 
+TextStyle textstyleregular({
+  double size = 16,
+  Color color = kBlackApp,
+  double? letterSpacing,
+}) =>
+    TextStyle(
+      letterSpacing: letterSpacing,
+      fontFamily: 'Lato',
+      color: color,
+      fontSize: size,
+      fontWeight: FontWeight.w400,
+    );
+
 /// Weight 400 fontstyle italic
 TextStyle textstyleregularItalic({double size = 16, Color color = kBlackApp}) =>
     TextStyle(
         fontStyle: FontStyle.italic,
-        fontFamily: 'Viga',
+        fontFamily: 'Lato',
         color: color,
         fontSize: size,
         fontWeight: FontWeight.w400);
@@ -152,7 +165,7 @@ TextStyle textstyleregularItalic({double size = 16, Color color = kBlackApp}) =>
 /// Weight 500
 TextStyle textstylemedium({double size = 16, Color color = kBlackApp}) =>
     TextStyle(
-        fontFamily: 'Viga',
+        fontFamily: 'Lato',
         color: color,
         fontSize: size,
         fontWeight: FontWeight.w500);
@@ -160,29 +173,19 @@ TextStyle textstylemedium({double size = 16, Color color = kBlackApp}) =>
 /// Weight 700
 TextStyle textstyleBold({double size = 16, Color color = kBlackApp}) =>
     TextStyle(
-        fontFamily: 'Viga',
+        fontFamily: 'Lato',
         color: color,
         fontSize: size,
         fontWeight: FontWeight.w700);
 
-/// Weight 600
-TextStyle textstyleSemiBold({double size = 16, Color color = kBlackApp}) =>
+/// weight black
+TextStyle textstyleBlack({double size = 16, Color color = kBlackApp}) =>
     TextStyle(
-      fontFamily: 'Viga',
-      color: color,
-      fontSize: size,
-      fontWeight: FontWeight.w600,
-    );
-TextStyle textstyleHint({double size = 16, Color color = kBlackApp}) =>
-    TextStyle(fontFamily: 'Viga', color: color, fontSize: size);
-
-/// Weight 300
-TextStyle textstyleLight({double size = 16, Color color = kBlackApp}) =>
-    TextStyle(
-        fontFamily: 'Viga',
+        fontFamily: 'Lato',
         color: color,
         fontSize: size,
-        fontWeight: FontWeight.w300);
+        fontWeight: FontWeight.w900);
+
 // convertidores
 DateTime stringToDateDDMMAAAA(String dateString) {
   var x = dateString.split('/');
