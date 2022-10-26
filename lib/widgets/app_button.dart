@@ -35,7 +35,7 @@ class AppButton extends StatelessWidget {
         padding: EdgeInsets.all(2),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(27)),
         child: Container(
-          width: ss.width / 2,
+          width: ss.width / 3,
           height: 50,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),

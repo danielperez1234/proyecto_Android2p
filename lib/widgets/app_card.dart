@@ -4,6 +4,7 @@ import 'package:integranic_movil_cliente/Constantes.dart';
 class AppCard extends StatelessWidget {
   AppCard(
       {Key? key,
+      required this.onPressed,
       required this.textHead,
       required this.textMid,
       required this.textPie,
@@ -13,11 +14,14 @@ class AppCard extends StatelessWidget {
   String textMid;
   String textPie;
   bool isIncomplete;
+  Function() onPressed;
   @override
   Widget build(BuildContext context) {
     var ss = MediaQuery.of(context).size;
     return RawMaterialButton(
-      onPressed: () {},
+      onPressed: () {
+        onPressed();
+      },
       focusElevation: 0,
       hoverColor: kDarkBlue,
       splashColor: kDarkBlue2,

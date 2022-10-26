@@ -97,6 +97,7 @@ class GaleriaPage extends StatelessWidget {
           textMid: "477 956 27 98 \nlorena@gmail.com",
           textPie: "Ver mis datos completos",
           isIncomplete: true,
+          onPressed: () {},
         ),
         "Semana": AppSemana(
           semanaIndex: 3,

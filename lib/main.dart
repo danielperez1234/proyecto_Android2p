@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:integranic_movil_cliente/galeria/galeria_page.dart';
+import 'package:integranic_movil_cliente/controller/persona_controller.dart';
+import 'package:integranic_movil_cliente/pages/login.dart';
 import 'package:timezone/data/latest.dart' as tz;
 
-void main() {
+void main() async {
   tz.initializeTimeZones();
   WidgetsFlutterBinding.ensureInitialized();
+  await PersonController().initDataBase();
   runApp(MyApp());
 }
 
@@ -28,6 +30,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: GaleriaPage());
+        home: Login());
   }
 }
